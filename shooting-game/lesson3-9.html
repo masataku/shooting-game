@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<script src="player.js" defer></script>
+		<script src="enemy.js" defer></script>
+		<script src="item.js" defer></script>
+		<script src="meteor.js" defer></script>
+		<script src="score.js" defer></script>
+		<script src="boss.js" defer></script>
+		<style>
+			body {
+				background-color: black;
+				margin: 0;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center; /*縦方向中央寄せ*/
+				align-items: center;     /*横方向中央寄せ*/
+			}
+			canvas {
+				width: 90vmin; /*画面の短辺に合わせる（縦横比を維持）*/
+				height: 90vmin;
+				max-width: 800px; /*最大サイズを800×800に制限*/
+				max-height: 800px;
+				background-color: #1a1c2c;
+			}
+			.button {
+				display: flex;
+				justify-content: center;
+				margin-top: 20px;
+			}
+			.button button {
+				margin: 0 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width="800" height="800"></canvas>
+		
+		<div class="button">
+			<button id="startButton" onclick="startAnimation();">スタート</button>
+			<button id="stopButton" onclick="stopAnimation();">ストップ</button>
+		</div>
+	</body>
+</html>
